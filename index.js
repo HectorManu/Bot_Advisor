@@ -43,7 +43,7 @@ client.on("ready", () => {
     console.log("Client is ready!");
 
     setTimeout(() => {
-      let chatId = `${country_code}${number}@c.us`;
+        let chatId = `${country_code}${number}@c.us`;
         client.sendMessage(chatId, msg).then((response) => {
             if (response.id.fromMe) {
                 console.log("It works!");
@@ -53,7 +53,7 @@ client.on("ready", () => {
 });
 
 client.on('message', message => {
-	if(message.body === '!ping') {
-		message.reply('pong');
-	}
+    if (message.body === '!ping') {
+        message.reply('pong');
+    }
 });
